@@ -171,3 +171,8 @@ int main(int argc, char **argv)
 
      return 0;
 }
+
+/*
+     Note: this natsort.cpp file is actually written in c,
+     but the extension is .cpp so meson can compile it
+*/
