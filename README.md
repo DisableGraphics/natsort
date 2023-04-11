@@ -153,3 +153,7 @@ It might be good to support multibyte character sets too.
 
 If you fix either of these, please mail me.  They should not be
 very hard.
+
+# DisableGraphics's additions:
+- C++ support (for `std::sort`)
+- `meson.build` file so you can import it into a meson workspace 
