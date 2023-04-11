@@ -1,18 +1,16 @@
 project('strnatcmp', 'cpp', version: 'snapshot')
 
-libstrnatcmp = static_library('strnatcmp',
-  'strnatcmp.cpp',
+incdir = include_directories('include')
+strnat_sources = ['src/strnatcmp.cpp']
+
+libstrnatcmp = library('strnatcmp',
+  strnat_sources,
   install: true,
-  install_dir: join_paths(get_option('prefix'), get_option('includedir'), 'strnatcmp')
+  install_dir: '/usr/lib',
+  include_directories: incdir
 )
 
-strnatcmp = declare_dependency(
+natsort_dep = declare_dependency(
   link_with: libstrnatcmp,
-  include_directories: include_directories('.')
-)
-
-#For the test
-executable('natsort', 
-    'natsort.cpp',
-    dependencies: strnatcmp,
+  include_directories: incdir
 )
