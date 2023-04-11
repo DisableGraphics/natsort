@@ -1,3 +1,5 @@
 strnatcmp.o
 natsort.o
 natsort
+
+builddir
